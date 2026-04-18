@@ -28,17 +28,35 @@
     <Reference Include="Il2CppRUMBLE.Runtime">
       <HintPath>..\..\..\SteamLibrary\steamapps\common\RUMBLE\MelonLoader\Il2CppAssemblies\Il2CppRUMBLE.Runtime.dll</HintPath>
     </Reference>
-    <Reference Include="ModUI">
-      <HintPath>..\..\..\SteamLibrary\steamapps\common\RUMBLE\Mods\ModUI.dll</HintPath>
-    </Reference>
     <Reference Include="RumbleModdingAPI">
       <HintPath>..\..\..\SteamLibrary\steamapps\common\RUMBLE\Mods\RumbleModdingAPI.dll</HintPath>
+    </Reference>
+    <Reference Include="UIFramework">
+      <HintPath>..\..\..\SteamLibrary\steamapps\common\RUMBLE\Mods\UIFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AssetBundleModule">
+      <HintPath>..\..\..\SteamLibrary\steamapps\common\RUMBLE\MelonLoader\Il2CppAssemblies\UnityEngine.AssetBundleModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AudioModule">
+      <HintPath>..\..\..\SteamLibrary\steamapps\common\RUMBLE\MelonLoader\Il2CppAssemblies\UnityEngine.AudioModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.CoreModule">
       <HintPath>..\..\..\SteamLibrary\steamapps\common\RUMBLE\MelonLoader\Il2CppAssemblies\UnityEngine.CoreModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.ImageConversionModule">
       <HintPath>..\..\..\SteamLibrary\steamapps\common\RUMBLE\MelonLoader\Il2CppAssemblies\UnityEngine.ImageConversionModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>..\..\..\SteamLibrary\steamapps\common\RUMBLE\MelonLoader\Il2CppAssemblies\UnityEngine.PhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAudioModule">
+      <HintPath>..\..\..\SteamLibrary\steamapps\common\RUMBLE\MelonLoader\Il2CppAssemblies\UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestModule">
+      <HintPath>..\..\..\SteamLibrary\steamapps\common\RUMBLE\MelonLoader\Il2CppAssemblies\UnityEngine.UnityWebRequestModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestWWWModule">
+      <HintPath>..\..\..\SteamLibrary\steamapps\common\RUMBLE\MelonLoader\Il2CppAssemblies\UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
     </Reference>
   </ItemGroup>
 
@@ -48,7 +66,28 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Resources\" />
+    <None Remove="Resources\rain" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\rainsfx.ogg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\rain2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\rain3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\rain4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\rain5" />
+    <EmbeddedResource Include="Resources\rain5" />
   </ItemGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
