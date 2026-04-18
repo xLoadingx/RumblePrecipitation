@@ -1,0 +1,58 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>disable</Nullable> 
+    <RootNamespace>RumblePrecipitation</RootNamespace>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>embedded</DebugType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="Il2CppBucketheadEntertainment.Plugins">
+      <HintPath>..\..\..\SteamLibrary\steamapps\common\RUMBLE\MelonLoader\Il2CppAssemblies\Il2CppBucketheadEntertainment.Plugins.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppInterop.Runtime">
+      <HintPath>..\..\..\SteamLibrary\steamapps\common\RUMBLE\MelonLoader\net6\Il2CppInterop.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2Cppmscorlib">
+      <HintPath>..\..\..\SteamLibrary\steamapps\common\RUMBLE\MelonLoader\Il2CppAssemblies\Il2Cppmscorlib.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppPhotonUnityNetworking">
+      <HintPath>..\..\..\SteamLibrary\steamapps\common\RUMBLE\MelonLoader\Il2CppAssemblies\Il2CppPhotonUnityNetworking.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppRUMBLE.Runtime">
+      <HintPath>..\..\..\SteamLibrary\steamapps\common\RUMBLE\MelonLoader\Il2CppAssemblies\Il2CppRUMBLE.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="ModUI">
+      <HintPath>..\..\..\SteamLibrary\steamapps\common\RUMBLE\Mods\ModUI.dll</HintPath>
+    </Reference>
+    <Reference Include="RumbleModdingAPI">
+      <HintPath>..\..\..\SteamLibrary\steamapps\common\RUMBLE\Mods\RumbleModdingAPI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\..\SteamLibrary\steamapps\common\RUMBLE\MelonLoader\Il2CppAssemblies\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ImageConversionModule">
+      <HintPath>..\..\..\SteamLibrary\steamapps\common\RUMBLE\MelonLoader\Il2CppAssemblies\UnityEngine.ImageConversionModule.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="LavaGang.MelonLoader" Version="0.7.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="COPY &quot;$(TargetPath)&quot; &quot;E:\SteamLibrary\steamapps\common\RUMBLE\Mods&quot;&#xA;&#xA;" />
+  </Target>
+
+</Project>
